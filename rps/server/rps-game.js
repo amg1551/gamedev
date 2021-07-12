@@ -5,7 +5,7 @@ class RpsGame {
     this._players = [p1, p2];
     this._turns = [null, null];
 
-    this._sendToPlayers('Rock Paper Scissors Starts!');
+    this._sendToPlayers('chat başarıyla başladı');
 
     this._players.forEach((player, idx) => {
       player.on('turn', (turn) => {

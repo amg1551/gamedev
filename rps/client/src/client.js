@@ -29,7 +29,7 @@ const addButtonListeners = () => {
   });
 };
 
-writeEvent('Welcome to RPS');
+writeEvent('amg chat e hoşgeldiniz');
 
 const sock = io();
 sock.on('message', writeEvent);

@@ -7,7 +7,7 @@ const RpsGame = require('./rps-game');
 const app = express();
 
 const clientPath = `${__dirname}/../client`;
-console.log(`Serving static from ${clientPath}`);
+console.log(`Serving static from ${clientPath}`);npm
 
 app.use(express.static(clientPath));
 
@@ -24,7 +24,7 @@ io.on('connection', (sock) => {
     waitingPlayer = null;
   } else {
     waitingPlayer = sock;
-    waitingPlayer.emit('message', 'Waiting for an opponent');
+    waitingPlayer.emit('message', 'kişiler bekleniyor');
   }
 
   sock.on('message', (text) => {
@@ -36,6 +36,6 @@ server.on('error', (err) => {
   console.error('Server error:', err);
 });
 
-server.listen(8080, () => {
-  console.log('RPS started on 8080');
+server.listen(8089, () => {
+  console.log('chat started on 8089');
 });
